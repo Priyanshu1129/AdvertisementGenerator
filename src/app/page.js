@@ -28,7 +28,7 @@ export default function HomePage() {
   // If user is signed in, show the welcome message and credit points
   if (isSignedIn) {
     return (
-      <AuthenticatedLandingPage />
+      <AuthenticatedLandingPage creditPoints={creditPoints} />
     );
   }
 

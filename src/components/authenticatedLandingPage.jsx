@@ -1,13 +1,11 @@
 "use client";
-
-import { UserButton } from "@clerk/nextjs";
 import Header from "./header";
 
-export default function AuthenticatedLandingPage() {
+export default function AuthenticatedLandingPage({ creditPoints }) {
   return (
     <div className="landing-page">
       {/* Header */}
-      <Header isAuthenticated={true} />
+      <Header isAuthenticated={true} creditPoints={creditPoints} />
 
       {/* Hero Section */}
       <main className="hero">
