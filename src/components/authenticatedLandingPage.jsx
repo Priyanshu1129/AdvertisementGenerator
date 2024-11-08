@@ -3,6 +3,7 @@ import Header from "./header";
 import { useState } from "react";
 import { FiUpload } from "react-icons/fi";
 import { IoSend } from "react-icons/io5";
+import { MdClose } from "react-icons/md";
 
 export default function AuthenticatedLandingPage({ creditPoints }) {
   const [file, setFile] = useState(null);
@@ -16,6 +17,10 @@ export default function AuthenticatedLandingPage({ creditPoints }) {
     }
   };
 
+  const handleRemoveFile = () => {
+    setFile(null);
+  };
+
   const handleSubmit = async () => {
     if (!file || !description) {
       alert("Please provide an image and description.");
@@ -23,7 +28,7 @@ export default function AuthenticatedLandingPage({ creditPoints }) {
     }
 
     setLoading(true);
-    setOutputImage(null); // Clear previous image if any
+    setOutputImage(null);
 
     const formData = new FormData();
     formData.append("image", file);
@@ -80,6 +85,19 @@ export default function AuthenticatedLandingPage({ creditPoints }) {
             onChange={handleFileChange}
             style={{ display: "none" }}
           />
+
+          {file && (
+            <div className="image-preview">
+              <img
+                src={URL.createObjectURL(file)}
+                alt="Uploaded Preview"
+                className="preview-image"
+              />
+              <button onClick={handleRemoveFile} className="remove-button">
+                <MdClose />
+              </button>
+            </div>
+          )}
 
           <input
             type="text"

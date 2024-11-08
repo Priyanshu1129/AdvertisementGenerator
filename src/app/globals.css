@@ -175,6 +175,7 @@ a {
 }
 
 .input-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -213,13 +214,6 @@ a {
   color: #fff;
 }
 
-
-.input-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
 .file-upload-icon {
   position: absolute;
   left: 20px;
@@ -233,16 +227,8 @@ a {
   flex: 1;
 }
 
-.send-button {
-  margin-left: 10px;
-}
 
 
-.input-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
 
 .file-upload-icon {
   position: absolute;
@@ -257,14 +243,62 @@ a {
   flex: 1;
 }
 
-.send-button {
-  margin-left: 10px;
-}
 
 .output-image {
   margin-top: 20px;
   margin: 0 auto;
   max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+
+.file-upload-icon {
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+}
+
+.custom-input {
+  padding-left: 35px;
+  flex: 1;
+}
+
+
+
+.image-preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.preview-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.remove-button {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  color: #888;
+}
+
+.output-image {
+  margin-top: 20px;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
