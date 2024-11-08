@@ -1,10 +1,10 @@
 // src/app/api/users/creditPoints/route.js
 import { NextResponse } from 'next/server';
-import { clerkClient } from "@clerk/nextjs";
+import { clerkClient } from '@clerk/clerk-sdk-node';
 
 export async function POST(request) {
   const user = await request.json();
-  
+
   try {
     await clerkClient.users.updateUser(user.id, {
       publicMetadata: { creditPoints: 100 },
@@ -15,3 +15,6 @@ export async function POST(request) {
     return NextResponse.json({ success: false, error: error.message });
   }
 }
+
+
+

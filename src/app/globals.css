@@ -1,12 +1,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #0070f3;
+  --secondary-color: #333;
+  --button-background: #0070f3;
+  --button-foreground: #ffffff;
+  --border-color: #ddd;
+  --muted-color: #666;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary-color: #4ba6f7;
+    --secondary-color: #f0f0f0;
+    --button-background: #4ba6f7;
+    --button-foreground: #171717;
+    --border-color: #444;
+    --muted-color: #aaaaaa;
   }
 }
 
@@ -14,9 +26,6 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
@@ -35,8 +44,171 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Landing Page and Authenticated Landing Page Styles */
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--foreground);
+}
+
+.header nav a {
+  margin: 0 15px;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.login-button {
+  background-color: var(--button-background);
+  color: var(--button-foreground);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hero Section Styles */
+.hero {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--foreground);
+}
+
+.hero h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--muted-color);
+  margin-bottom: 30px;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.get-started-button,
+.live-demo-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.get-started-button {
+  background-color: var(--button-background);
+  color: var(--button-foreground);
+}
+
+.live-demo-button {
+  background-color: var(--background);
+  color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+}
+
+/* Features Section Styles */
+.features {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.features h3 {
+  color: var(--primary-color);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.features h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 10px;
+  color: var(--foreground);
+}
+
+.features p {
+  color: var(--muted-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Custom Prompt Section Styles (for Authenticated Landing Page) */
+.custom-prompt {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.custom-prompt p {
+  font-size: 20px;
+  color: var(--foreground);
+  margin-top: 10px;
+}
+
+
+.custom-prompt {
+  padding: 20px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: #333;
+  border-radius: 30px;
+  padding: 10px 15px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.custom-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px;
+  width: 200px;
+}
+
+.custom-input::placeholder {
+  color: #888;
+}
+
+.send-button {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.send-button:hover {
+  color: #fff;
 }
