@@ -212,3 +212,27 @@ a {
 .send-button:hover {
   color: #fff;
 }
+
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.file-upload-icon {
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+}
+
+.custom-input {
+  padding-left: 35px; /* Space for the icon */
+  flex: 1;
+}
+
+.send-button {
+  margin-left: 10px;
+}
