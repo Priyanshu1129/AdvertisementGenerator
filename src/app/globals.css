@@ -236,3 +236,35 @@ a {
 .send-button {
   margin-left: 10px;
 }
+
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.file-upload-icon {
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+}
+
+.custom-input {
+  padding-left: 35px;
+  flex: 1;
+}
+
+.send-button {
+  margin-left: 10px;
+}
+
+.output-image {
+  margin-top: 20px;
+  margin: 0 auto;
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
