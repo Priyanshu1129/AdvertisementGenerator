@@ -1,5 +1,5 @@
 "use client";
-import Header from "./Header";
+import Header from "./header";
 import { SignInButton } from "@clerk/nextjs";
 
 export default function LandingPage() {

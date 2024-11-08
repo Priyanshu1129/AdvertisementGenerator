@@ -1,6 +1,6 @@
 "use client";
 import "./globals.css"
-import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import LandingPage from "@/components/landingPage";
 import AuthenticatedLandingPage from "@/components/authenticatedLandingPage";
